@@ -1,0 +1,26 @@
+{
+  "name": "dgraph",
+  "projectType": "library",
+  "sourceRoot": "libs/data/dgraph/src",
+  "prefix": "hyperconverged",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/data/dgraph"],
+      "options": {
+        "jestConfig": "libs/data/dgraph/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/data/dgraph/src/**/*.ts",
+          "libs/data/dgraph/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
