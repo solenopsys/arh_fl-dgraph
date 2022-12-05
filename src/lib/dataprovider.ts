@@ -2,6 +2,7 @@ import {DataPageConfig, DataProvider, DgraphService, EntityTitle} from "..";
 
 import {filter, map} from "rxjs/operators";
 import {firstValueFrom, Observable, Subject} from "rxjs";
+import { ProviderService } from "@solenopsys/uimatrix-forms";
 
 export class DgraphDataProvider implements DataProvider {
   private subject = new Subject<EntityTitle[]>();
@@ -36,6 +37,20 @@ export class DgraphDataProvider implements DataProvider {
     return this.dg.selectOneTitleEntity(this.key, id);
   }
 }
+
+
+export class DgraphDataProviderService implements ProviderService{
+
+  constructor(private dg: DgraphService){
+
+  }
+  getProvider(key: string, titleKey?: string): DataProvider {
+    return new DgraphDataProvider(this.dg,key,titleKey);
+  }
+
+}
+
+
 
 export interface DataListInterface {
   next(start: number, count: number, conf: DataPageConfig): Promise<any>;

@@ -21,7 +21,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "hyperconverged",
+            "prefix": "sc",
             "style": "camelCase"
           }
         ],
@@ -29,7 +29,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "hyperconverged",
+            "prefix": "sc",
             "style": "kebab-case"
           }
         ]

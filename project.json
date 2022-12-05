@@ -2,7 +2,7 @@
   "name": "dgraph",
   "projectType": "library",
   "sourceRoot": "packages/libs/dgraph/src",
-  "prefix": "hyperconverged",
+  "prefix": "sc",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
