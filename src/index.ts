@@ -5,3 +5,4 @@ export * from './lib/query-gen';
 export * from './lib/dataprovider';
 export * from './lib/http-dgraph-transport.service';
 export * from './lib/ws-dgraph-transport.service';
+export * from './lib/rows.store';
