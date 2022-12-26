@@ -9,9 +9,15 @@
     "types": [],
     "lib": [
       "es2020",
-      "dom",
+      "dom"
     ]
   },
-  "exclude": ["src/test-setup.ts", "**/*.spec.ts", "**/*.test.ts"],
-  "include": ["**/*.ts"]
+  "exclude": [
+    "src/test-setup.ts",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ],
+  "include": [
+    "**/*.ts"
+  ]
 }

@@ -6,7 +6,9 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/libs/dgraph"],
+      "outputs": [
+        "coverage/packages/libs/dgraph"
+      ],
       "options": {
         "jestConfig": "packages/libs/dgraph/jest.config.js",
         "passWithNoTests": true

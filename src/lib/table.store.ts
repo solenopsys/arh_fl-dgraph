@@ -3,70 +3,70 @@ import {Injectable} from "@angular/core";
 import {DgraphService} from "..";
 
 export class TableData {
-  rows!: any[];
-  position!: number;
-  //fullSize!: number;
+    rows!: any[];
+    position!: number;
+    //fullSize!: number;
 }
 
 export class TableStateModel {
-  tablesData!: { [key: string]: TableData };
-  current: string | undefined;
+    tablesData!: { [key: string]: TableData };
+    current: string | undefined;
 }
 
 
 export class SelectTable {
-  static readonly type = '[Tables] Select';
+    static readonly type = '[Tables] Select';
 
-  constructor(public name: string) {
-  }
+    constructor(public name: string) {
+    }
 }
 
 export class LoadTableData {
-  static readonly type = '[Tables] Load Data Frame';
+    static readonly type = '[Tables] Load Data Frame';
 
-  constructor(tableName: string, start: number, count: number) {
-  }
+    constructor(tableName: string, start: number, count: number) {
+    }
 }
 
 export class AddRow {
-  static readonly type = '[Tables] Add Row';
+    static readonly type = '[Tables] Add Row';
 
-  constructor(public tableName: string,   data: any) {
-  }
+    constructor(public tableName: string, data: any) {
+    }
 }
 
 export class DeleteRow {
-  static readonly type = '[Tables] Delete Row';
+    static readonly type = '[Tables] Delete Row';
 
-  constructor(public tableName: string, public uid: number) {
-  }
+    constructor(public tableName: string, public uid: number) {
+    }
 }
 
 export class ChangeRow {
-  static readonly type = '[Tables] Change Row';
+    static readonly type = '[Tables] Change Row';
 
-  constructor(public tableName: string, public uid: number) {
-  }
+    constructor(public tableName: string, public uid: number) {
+    }
 }
 
 export class EditRow {
-  static readonly type = '[Tables] Delete Row';
+    static readonly type = '[Tables] Delete Row';
 
-  constructor(public tableName: string, public nuid: number) {
-  }
+    constructor(public tableName: string, public nuid: number) {
+    }
 }
 
 
 @State<TableStateModel>({
-    name: 'tables',
-    defaults: {
-      tablesData: {},
-      current: undefined
+        name: 'tables',
+        defaults: {
+            tablesData: {},
+            current: undefined
+        }
     }
-  }
 )
 @Injectable()
 export class ClusterState {
-  constructor(private draph: DgraphService) {
-  }
+    constructor(private draph: DgraphService) {
+    }
 }
