@@ -1,5 +1,5 @@
 {
-  "name": "@solenopsys/sc-fl-dgraph",
+  "name": "@solenopsys/hc-fl-dgraph",
   "version": "0.9.1",
   "scripts": {
     "test": "node index.js",
