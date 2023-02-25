@@ -16,11 +16,11 @@ export class WsDgraphTransport implements Transport {
 
     createMutate(query: string): Observable<any> {
         //@ts-ignore
-        return this.hStreamService.createStringQuery("alexstorm-hsm-dgraph", query, 2);
+        return this.hStreamService.createStringQuery("richteri-hsm-dgraph", query, 2);
     }
 
     createQuery(query: string): Observable<any> {
-        return this.hStreamService.createStringQuery("alexstorm-hsm-dgraph", query, 1)
+        return this.hStreamService.createStringQuery("richteri-hsm-dgraph", query, 1)
     }
 
 }
