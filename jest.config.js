@@ -8,7 +8,7 @@ module.exports = {
             stringifyContentPathRegex: '\\.(html|svg)$',
         },
     },
-    coverageDirectory: '../../../coverage/packages/libs/dgraph',
+    coverageDirectory: '../../../coverage/packages/libraries/fl-dgraph',
     transform: {
         '^.+.(ts|mjs|js|html)$': 'jest-preset-angular',
     },

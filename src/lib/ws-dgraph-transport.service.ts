@@ -1,5 +1,5 @@
 import {Observable} from "rxjs";
-import {HStreamService} from "@solenopsys/lib-hyperstreams";
+import {HStreamService} from "@solenopsys/fl-hyperstreams";
 import {Store} from "@ngxs/store";
 
 export interface Transport {

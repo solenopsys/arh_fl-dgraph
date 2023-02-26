@@ -1,16 +1,16 @@
 {
-  "name": "dgraph",
+  "name": "fl-dgraph",
   "projectType": "library",
-  "sourceRoot": "packages/libs/dgraph/src",
+  "sourceRoot": "packages/libraries/fl-dgraph/src",
   "prefix": "sc",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": [
-        "coverage/packages/libs/dgraph"
+        "coverage/packages/libraries/fl-dgraph"
       ],
       "options": {
-        "jestConfig": "packages/libs/dgraph/jest.config.js",
+        "jestConfig": "packages/libraries/fl-dgraph/jest.config.js",
         "passWithNoTests": true
       }
     },
@@ -18,8 +18,8 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "packages/libs/dgraph/src/**/*.ts",
-          "packages/libs/dgraph/src/**/*.html"
+          "packages/libraries/fl-dgraph/src/**/*.ts",
+          "packages/libraries/fl-dgraph/src/**/*.html"
         ]
       }
     }

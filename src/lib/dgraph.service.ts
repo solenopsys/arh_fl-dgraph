@@ -4,7 +4,7 @@ import {map} from "rxjs/operators";
 import {DataPageConfig, FieldType} from "./model";
 import {QueryGen} from "./query-gen";
 import {Transport, WsDgraphTransport} from "./ws-dgraph-transport.service";
-import {HStreamService} from "@solenopsys/lib-hyperstreams";
+import {HStreamService} from "@solenopsys/fl-hyperstreams";
 import {Store} from "@ngxs/store";
 
 
