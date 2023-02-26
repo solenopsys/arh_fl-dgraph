@@ -2,7 +2,7 @@ import {DataPageConfig, DataProvider, DgraphService, EntityTitle} from "..";
 
 import {filter, map} from "rxjs/operators";
 import {firstValueFrom, Observable, Subject} from "rxjs";
-import {ProviderService} from "@solenopsys/uimatrix-forms";
+import {ProviderService} from "@solenopsys/ui-forms";
 
 export class DgraphDataProvider implements DataProvider {
     private subject = new Subject<EntityTitle[]>();
