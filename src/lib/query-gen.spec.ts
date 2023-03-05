@@ -1,6 +1,6 @@
 import {QueryGen} from './query-gen';
-import {ArticleVersion, DataPageConfig, FacetType, FieldType} from './model';
-import {TextNodeType} from "@hyperconverged/fui/editor";
+import {ArticleVersion, DataPageConfig, FacetType, FieldType, TextNodeType} from './model';
+
 
 
 export const TEST_CONFIG: DataPageConfig = {
