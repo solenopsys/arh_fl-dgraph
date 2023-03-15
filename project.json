@@ -1,5 +1,6 @@
 {
   "name": "fl-dgraph",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "packages/libraries/fl-dgraph/src",
   "prefix": "sc",
