@@ -1,5 +1,5 @@
 import {QueryGen} from './query-gen';
-import {ArticleVersion, DataPageConfig, FacetType, FieldType, TextNodeType} from './model';
+import { DataPageConfig, FacetType, FieldType} from './model';
 
 
 
@@ -65,26 +65,6 @@ describe('QueryGen', () => {
                 '<0xc36b> <description> "test description" . \n' +
                 '<0xc36b> <date> "2021-03-24" . \n' +
                 ' }  }');
-        });
-
-        it('new text version correct', () => {
-            const values: ArticleVersion = {
-                articleId: '32423',
-                blocks: [
-                    {type: TextNodeType.PARAGRAPH, value: 'first', uid: 'bla'},
-                    {type: TextNodeType.PARAGRAPH, value: 'second', before: 'before'}
-                ],
-            };
-            const s = '{ set { _:art <fragment> <32423> . \n' +
-                '_:textVersion <version_date>  "2021-09-03T13:22:38.296Z" .\n' +
-                '_:art <blocks> <bla> (ord=0) . \n' +
-                '_:block1 <type> "PARAGRAPH" . \n' +
-                '_:block1 <before> <before> . \n' +
-                '_:block1 <data> "second" . \n' +
-                '_:art <blocks> _:block1 (ord=1) . \n' +
-                ' }  }';
-            expect(QueryGen.newTextVersion(values)).toEqual(s);
-
         });
 
 

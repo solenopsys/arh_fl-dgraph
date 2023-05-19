@@ -1,4 +1,4 @@
-import {ArticleVersion, DataPageConfig, FieldType, FormField} from './model';
+import { DataPageConfig, FieldType, FormField} from './model';
 
 
 export class QueryGen {
@@ -40,36 +40,7 @@ export class QueryGen {
         return this.wrapTriples([{triples, command: "set"}]);
     }
 
-    public static newTextVersion(f: ArticleVersion): string {
-        console.log('TEXT VERSIOn', JSON.stringify(f, undefined, 4));
-        const triples: string[] = [];
-        const textVersion = 'textVersion';
-        //    const dateTime = new Date();
-        triples.push(`<${f.articleId}>  <versions> _:${textVersion}`);
 
-        const modDate = new Date();
-        const modified = modDate.toISOString();
-        triples.push(`_:${textVersion} <version_date>  "${modified}"`);
-        let i = 0;
-        for (const block of f.blocks) {
-            const blockName = `block${i}`;
-            if (!block.uid) {
-                console.log('BLCOK', block);
-                triples.push(`_:${blockName} <type> "${block.type}"`);
-                if (block.before) {
-                    triples.push(`_:${blockName} <before> <${block.before}>`);
-                }
-                triples.push(`_:${blockName} <value> "${block.value}"`);
-
-                triples.push(`_:${textVersion} <blocks> _:${blockName} (ord=${i})`);
-            } else {
-                triples.push(`_:${textVersion} <blocks> <${block.uid}> (ord=${i})`);
-            }
-
-            i++;
-        }
-        return QueryGen.wrapTriples([{triples, command: "set"}]);
-    }
 
     static escape(value: string): string {
         return value.replace(/(?:\r\n|\r|\n)/g, '\\n')

@@ -95,7 +95,7 @@ export interface DataPageConfig extends FormConfig {
     listQ: string;
     deleteQ?: string;
     massCommand?: boolean
-    dataProvider: ProviderToken<DataListInterface | DataItemInterface>
+    dataProvider?: ProviderToken<DataListInterface | DataItemInterface>
 }
 
 export interface EntityTitle {
@@ -115,25 +115,4 @@ export interface Article {
     version: string;
 }
 
-//todo move this to another module
-export enum TextNodeType {
-    PARAGRAPH = 'PARAGRAPH',
-    HEADER1 = 'HEADER1',
-    HEADER2 = 'HEADER2',
-    HEADER3 = 'HEADER3',
-    IMAGE = 'IMAGE',
-    CODE = 'CODE'
-}
 
-//todo move this to another module
-export interface ContentNode {
-    uid?: string;
-    before?: string;
-    type: TextNodeType;
-    value: string;
-}
-
-export interface ArticleVersion {
-    articleId: string;
-    blocks: ContentNode[];
-}
