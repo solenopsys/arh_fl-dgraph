@@ -1,9 +1,11 @@
 import {Action, createSelector, State, StateContext, Store} from "@ngxs/store";
 import {Injectable, Injector, ProviderToken} from "@angular/core";
-import {DataItemInterface, DataListInterface, DataPageConfig, DgraphService} from "@solenopsys/fl-dgraph";
 import {firstValueFrom, Observable, tap} from "rxjs";
 import {map} from "rxjs/operators";
 import {append, patch, removeItem} from "@ngxs/store/operators";
+import {DataItemInterface, DataListInterface} from "./dataprovider";
+import {DgraphService} from "./dgraph.service";
+import {DataPageConfig} from "./model";
 
 const BATCH_SIZE = 100; //todo в конфиг
 
@@ -99,6 +101,7 @@ export class DeleteRow {
 }
 
 
+// @ts-ignore
 @State<RowsStateModel>({
     name: 'rows',
     defaults: {

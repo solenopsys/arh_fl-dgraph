@@ -1,7 +1,9 @@
-import {DataPageConfig, DataProvider, DgraphService, EntityTitle} from "..";
+
 
 import {filter, map} from "rxjs/operators";
 import {firstValueFrom, Observable, Subject} from "rxjs";
+import {DataPageConfig, DataProvider, EntityTitle} from "./model";
+import {DgraphService} from "./dgraph.service";
 
 
 export class DgraphDataProvider implements DataProvider {

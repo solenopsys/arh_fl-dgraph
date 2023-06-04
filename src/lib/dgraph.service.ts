@@ -2,13 +2,12 @@ import {Inject, Injectable} from "@angular/core";
 import {Observable} from "rxjs";
 import {map} from "rxjs/operators";
 import {DataPageConfig, FieldType} from "./model";
-import {QueryGen} from "./query-gen";
-import {Transport, WsDgraphTransport} from "./ws-dgraph-transport.service";
 import {HStreamService} from "@solenopsys/fl-hyperstreams";
 import {Store} from "@ngxs/store";
+import {QueryGen} from "./query-gen";
+import {Transport, WsDgraphTransport} from "./ws-dgraph-transport.service";
 
 
-console.log("DGRAPH SERVIC1E");
 
 
 @Injectable({
@@ -18,6 +17,7 @@ export class DgraphService {
 
     dgraphTransport: Transport;
 
+    // @ts-ignore
     constructor(@Inject("assets_dir") public baseDir: string, store: Store, hstream: HStreamService) {
         this.dgraphTransport = new WsDgraphTransport(hstream, store);
     }

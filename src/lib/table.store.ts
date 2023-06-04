@@ -1,6 +1,7 @@
 import {State} from "@ngxs/store";
 import {Injectable} from "@angular/core";
-import {DgraphService} from "..";
+import {DgraphService} from "./dgraph.service";
+
 
 export class TableData {
     rows!: any[];

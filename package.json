@@ -1,8 +1,13 @@
 {
   "name": "@solenopsys/fl-dgraph",
-  "version": "0.9.1",
+  "version": "0.1.0",
   "scripts": {
-    "test": "node index.js",
-    "build": "etsc -p tsconfig.lib.json"
+    "build": "ng-packagr -p ng-package.json -c ../../../../tsconfig.base.json"
+  },
+  "noPeerDependencies": [
+  ],
+  "peerDependencies": {
+    "number-generator": "^4.0.6",
+    "@solenopsys/fl-hyperstreams": "^0.1.0"
   }
 }
