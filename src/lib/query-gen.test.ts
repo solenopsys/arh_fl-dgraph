@@ -1,6 +1,7 @@
 import {QueryGen} from './query-gen';
 import { DataPageConfig, FacetType, FieldType} from './model';
 
+import { describe, it, expect } from 'vitest';
 
 
 export const TEST_CONFIG: DataPageConfig = {
